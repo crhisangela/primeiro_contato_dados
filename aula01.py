@@ -12,8 +12,6 @@ dados.sample(10)   # retorna uma selecao aleatoria de linhas na quantidade escol
 
 dados.info()     # informação dos dados (str, int, etc)
 
-dados["Bairro"][6522]   # buscando X coluna na linha X
-
 dados.Bairro   # outra maneira de puxar só X coluna
 
 dados.Metragem.mean()   #média da coluna X que é int
@@ -36,14 +34,25 @@ print(imoveis_vila_mariana["Metragem"].mean())
 numero_imoveis_bairro = dados["Bairro"].value_counts()   
 numero_imoveis_bairro.head(10).plot.bar()
 
+#-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+#EXERCICIOS
+#-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
 
 
-# 1 - Realizar a média da metragem para cara um dos bairros (Paulo)
+# 1 - Realizar a média da metragem para cara um dos bairros
+dados.groupby('Bairro').mean()
 
-# 2 formas de selecionar os dados por bairro (consultar os métodos na documentação do pandas) (Thiago)
 
-# 3 - Explorar alguns gráficos na documentação e aplicar nas demais colunas do DF, tentar colocar alguma conclusão (Thiago)
+# 2 formas de selecionar os dados por bairro (consultar os métodos na documentação do pandas)
+dados['Bairro'].describe()   #descrição da coluna
+dados["Bairro"][6522]   # buscando X coluna na linha X
 
-# 4 - Pegar outros estatísticas dos dados, média, mediana, mim, max (Vivi)
 
-# 5 - Descobrir quais são os bairros que não tem nome de Rua. (Vivi)
+# 3 - Explorar alguns gráficos na documentação e aplicar nas demais colunas do DF, tentar colocar alguma conclusão
+dados.groupby('Bairro').Bairro.count().sort_values()[-5:].plot(kind='bar')  #Gráfico de barras com os 5 bairros com mais imoveis
+
+
+# 4 - Pegar outros estatísticas dos dados, média, mediana, mim, max
+
+
+# 5 - Descobrir quais são os bairros que não tem nome de Rua.
