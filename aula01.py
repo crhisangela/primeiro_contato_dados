@@ -41,6 +41,7 @@ numero_imoveis_bairro.head(10).plot.bar()
 
 # 1 - Realizar a média da metragem para cara um dos bairros
 dados.groupby('Bairro').mean()
+grupo_bairro = dados.groupby("Bairro")["Metragem"].mean()
 
 
 # 2 formas de selecionar os dados por bairro (consultar os métodos na documentação do pandas)
