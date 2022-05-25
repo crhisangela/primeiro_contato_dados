@@ -53,7 +53,7 @@ dados["Bairro"][6522]   # buscando X coluna na linha X
 dados.groupby('Bairro').Bairro.count().sort_values()[-5:].plot(kind='bar')  #Gráfico de barras com os 5 bairros com mais imoveis
 
 
-# 4 - Pegar outros estatísticas dos dados, média, mediana, mim, max
+# 4 - Pegar outras estatísticas dos dados, média, mediana, mim, max
 
 
 # 5 - Descobrir quais são os bairros que não tem nome de Rua.
