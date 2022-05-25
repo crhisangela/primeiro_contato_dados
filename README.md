@@ -11,4 +11,4 @@
 ## Aula 02 -  Tratamento de dados
 - [Video aula](https://www.alura.com.br/imersao-dados-4/aula02-tratamento-dados-primeiros-graficos)
 - [Guia rápido de Pandas](https://pandas.pydata.org/Pandas_Cheat_Sheet.pdf)
-- 
+
